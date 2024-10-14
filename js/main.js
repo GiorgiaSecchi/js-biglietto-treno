@@ -14,16 +14,15 @@
 
 // ! RACCOLTA DATI
 
-// * chiedere all'utente il numero di chilometri che vuole percorrere
-// * chiedere all'utente l'età del passeggero
+// * chiedere all'utente il numero di chilometri che vuole percorrere --> (numero km utente)
+// *    SE (numero km utente) NON è un numero uguale OR maggiore di 5
+// *        apparirà messaggio di errore
+
+// * chiedere all'utente l'età del passeggero  --> (età del passeggero)
+// *    SE (età del passeggero) NON è un numero compreso fra 1 AND 120
+// *        apparirà messaggio di errore
 
 // ! ELABORAZIONE
-
-// * SE (numero km utente) NON è un numero uguale OR maggiore di 1
-// *    apparirà messaggio di errore  
-
-// * SE (età del passeggero) NON è un numero compreso fra 1 AND 120
-// *    apparirà messaggio di errore  
 
 // * SE (numero km utente) AND (età del passeggero) sono validi
 // *    calcolo in base a (numero km utente) il (prezzo km del biglietto)
@@ -47,8 +46,19 @@
 
 // ! RACCOLTA DATI
 
-// * chiedere all'utente il numero di chilometri che vuole percorrere
-const MilesNumber = 
-// * controllo che sia valido
-// * chiedere all'utente l'età del passeggero
-// * controllo che sia valido
+// * chiedere all'utente il numero di chilometri che vuole percorrere --> (numero km utente)
+const MilesNumber = parseInt(
+  prompt("Qual'è il numero di chilometri che vuoi percorrere?")
+);
+
+// *    SE (numero km utente) NON è un numero uguale OR maggiore di 5
+const isMilesNumberValid = !isNaN(MilesNumber) >= 5;
+if (!isMilesNumberValid) {
+  alert("Il valore inserito non è valido");
+}
+
+// *        apparirà messaggio di errore
+
+// * chiedere all'utente l'età del passeggero  --> (età del passeggero)
+// *    SE (età del passeggero) NON è un numero compreso fra 1 AND 120
+// *        apparirà messaggio di errore
