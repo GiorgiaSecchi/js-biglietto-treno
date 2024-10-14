@@ -74,6 +74,8 @@ if (!isUserAgerValid) {
 
 // ! ELABORAZIONE
 
+let outputMessage;
+
 // * SE (numero km utente) AND (età del passeggero) sono validi
 if (isMilesNumberValid && isUserAgerValid) {
   // *    calcolo in base a (numero km utente) il (prezzo km del biglietto)
@@ -81,21 +83,32 @@ if (isMilesNumberValid && isUserAgerValid) {
   const TicketPrice = MilesNumber * MilesPrice;
   console.log(TicketPrice);
 
-  // *    SE (età del passeggero) è minore OR uguale a 17
+  // * SE (età del passeggero) è minore OR uguale a 17
   if (UserAge <= 17) {
-    // *    applico sconto del 20% al (prezzo km del biglietto)
+    // * applico sconto del 20% al (prezzo km del biglietto)
     const Discount20 = TicketPrice * 0.2;
     console.log(Discount20);
 
     const MinorTicketPrice = TicketPrice - Discount20;
     console.log(MinorTicketPrice);
+
+    // * apparirà messaggio con (prezzo km del biglietto scontato)
+    outputMessage = "Prezzo biglietto con lo sconto under18:";
   }
-  // *    apparirà messaggio con (prezzo km del biglietto scontato)
 
-  // *    SE (età del passeggero) è maggiore OR uguale di 65
-  // *    applico sconto del 40% al (prezzo km del biglietto)
-  // *    apparirà messaggio con (prezzo km del biglietto scontato)
+  // * SE (età del passeggero) è maggiore OR uguale di 65
+  if (UserAge >= 65) {
+    // * applico sconto del 40% al (prezzo km del biglietto)
+    const Discount40 = TicketPrice * 0.4;
+    console.log(Discount40);
 
-  // *    ALTRIMENTI SE (età del passeggero) è un numero compreso fra 18 AND 64
-  // *    apparirà messaggio con (prezzo km del biglietto)
+    const OverTicketPrice = TicketPrice - Discount40;
+    console.log(OverTicketPrice);
+
+    // * apparirà messaggio con (prezzo km del biglietto scontato)
+    outputMessage = "Prezzo biglietto con lo sconto over65:";
+  }
+
+  // * ALTRIMENTI SE (età del passeggero) è un numero compreso fra 18 AND 64
+  // * apparirà messaggio con (prezzo km del biglietto)
 }
