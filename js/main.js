@@ -110,5 +110,13 @@ if (isMilesNumberValid && isUserAgerValid) {
   }
 
   // * ALTRIMENTI SE (età del passeggero) è un numero compreso fra 18 AND 64
+  else if (UserAge >= 18 && <=64) 
   // * apparirà messaggio con (prezzo km del biglietto)
+  outputMessage = "Prezzo biglietto con lo sconto over65:" + TicketPrice ;
+  
 }
+
+// ! OUTPUT
+
+// * stampo il messaggio che comunica il prezzo finale
+alert(outputMessage)
