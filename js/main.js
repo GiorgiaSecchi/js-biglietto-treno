@@ -15,23 +15,40 @@
 // ! RACCOLTA DATI
 
 // * chiedere all'utente il numero di chilometri che vuole percorrere
-// * controllo che sia valido
 // * chiedere all'utente l'età del passeggero
-// * controllo che sia valido
 
 // ! ELABORAZIONE
 
-// * SE (numero km utente) AND (l'età del passeggero) sono validi
+// * SE (numero km utente) NON è un numero uguale OR maggiore di 1
+// *    apparirà messaggio di errore  
+
+// * SE (età del passeggero) NON è un numero compreso fra 1 AND 120
+// *    apparirà messaggio di errore  
+
+// * SE (numero km utente) AND (età del passeggero) sono validi
 // *    calcolo in base a (numero km utente) il (prezzo km del biglietto)
-// *    SE (l'età del passeggero) è minore OR uguale a 17
+
+// *    SE (età del passeggero) è minore OR uguale a 17
 // *    applico sconto del 20% al (prezzo km del biglietto)
-// *    SE (l'età del passeggero) è maggiore OR uguale di 65
+// *    apparirà messaggio con (prezzo km del biglietto scontato)
+
+// *    SE (età del passeggero) è maggiore OR uguale di 65
 // *    applico sconto del 40% al (prezzo km del biglietto)
-// *    ALTRIMENTI SE (l'età del passeggero) è un numero compreso fra 18 AND 64
-// *    preparo messaggio con (prezzo km del biglietto)
-// * ALTRIMENTI
-// *    apparirà messaggio di errore
+// *    apparirà messaggio con (prezzo km del biglietto scontato)
+
+// *    ALTRIMENTI SE (età del passeggero) è un numero compreso fra 18 AND 64
+// *    apparirà messaggio con (prezzo km del biglietto)
 
 // ! OUTPUT
 
 // * stampo il messaggio che comunica il prezzo finale
+
+/*********************************************************************************/
+
+// ! RACCOLTA DATI
+
+// * chiedere all'utente il numero di chilometri che vuole percorrere
+const MilesNumber = 
+// * controllo che sia valido
+// * chiedere all'utente l'età del passeggero
+// * controllo che sia valido
