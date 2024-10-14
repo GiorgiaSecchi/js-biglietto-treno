@@ -72,13 +72,15 @@ if (!isUserAgerValid) {
   alert("Il valore inserito non è valido");
 }
 
-
 // ! ELABORAZIONE
 
 // * SE (numero km utente) AND (età del passeggero) sono validi
-if (isMilesNumberValid && )
-
-// *    calcolo in base a (numero km utente) il (prezzo km del biglietto)
+if (isMilesNumberValid && isUserAgerValid) {
+  // *    calcolo in base a (numero km utente) il (prezzo km del biglietto)
+  let MilesPrice = 0.21;
+  const TicketPrice = MilesNumber * MilesPrice;
+  console.log(TicketPrice);
+}
 
 // *    SE (età del passeggero) è minore OR uguale a 17
 // *    applico sconto del 20% al (prezzo km del biglietto)
