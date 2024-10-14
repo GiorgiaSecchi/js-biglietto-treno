@@ -72,6 +72,9 @@ if (!isUserAgerValid) {
   alert("Il valore inserito non è valido");
 }
 
+console.log("KM da percorrere:" + " " + MilesNumber);
+console.log("Età passeggero:" + " " + UserAge);
+
 // ! ELABORAZIONE
 
 let outputMessage;
@@ -81,46 +84,43 @@ if (isMilesNumberValid && isUserAgerValid) {
   // *    calcolo in base a (numero km utente) il (prezzo km del biglietto)
   let MilesPrice = 0.21;
   const TicketPrice = MilesNumber * MilesPrice;
-  console.log(TicketPrice);
+  console.log("prezzo totale biglietto:" + " " + TicketPrice);
 
   // * SE (età del passeggero) è minore OR uguale a 17
   if (UserAge <= 17) {
     // * applico sconto del 20% al (prezzo km del biglietto)
     const Discount20 = TicketPrice * 0.2;
-    console.log(Discount20);
+    console.log("sconto 20%:" + " " + Discount20);
 
     const MinorTicketPrice = TicketPrice - Discount20;
-    console.log(MinorTicketPrice);
+    console.log(MinorTicketPrice + "€");
 
     // * apparirà messaggio con (prezzo km del biglietto scontato under18)
     outputMessage =
-      "Prezzo biglietto (sconto under18):" + " " + MinorTicketPrice;
+      "Prezzo biglietto (sconto under18):" + " " + MinorTicketPrice + "€";
   }
 
   // * SE (età del passeggero) è maggiore OR uguale di 65
   if (UserAge >= 65) {
     // * applico sconto del 40% al (prezzo km del biglietto)
     const Discount40 = TicketPrice * 0.4;
-    console.log(Discount40);
+    console.log("sconto 20%:" + " " + Discount40);
 
     const OverTicketPrice = TicketPrice - Discount40;
-    console.log(OverTicketPrice);
+    console.log(OverTicketPrice + "€");
 
     // * apparirà messaggio con (prezzo km del biglietto scontato over65)
-    outputMessage = "Prezzo biglietto (sconto over65):" + " " + OverTicketPrice;
+    outputMessage =
+      "Prezzo biglietto (sconto over65):" + " " + OverTicketPrice + "€";
   }
 
   // * ALTRIMENTI SE (età del passeggero) è un numero compreso fra 18 AND 64
   else if (UserAge >= 18 && UserAge <= 64)
     // * apparirà messaggio con (prezzo km del biglietto)
-    outputMessage = "Prezzo biglietto:" + " " + TicketPrice;
+    outputMessage = "Prezzo biglietto:" + " " + TicketPrice + "€";
 }
 
 // ! OUTPUT
-
-console.log("KM da percorrere:" + MilesNumber);
-console.log("Età passeggero:" + UserAge);
-console.log("Prezzo biglietto (non scontato):" + TicketPrice);
 
 // * stampo il messaggio che comunica il prezzo finale
 alert(outputMessage);
