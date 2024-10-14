@@ -104,7 +104,7 @@ if (isMilesNumberValid && isUserAgerValid) {
   if (UserAge >= 65) {
     // * applico sconto del 40% al (prezzo km del biglietto)
     const Discount40 = TicketPrice * 0.4;
-    console.log("sconto 20%:" + " " + Discount40);
+    console.log("sconto 40%:" + " " + Discount40);
 
     const OverTicketPrice = TicketPrice - Discount40;
     console.log(OverTicketPrice + "€");
