@@ -58,7 +58,7 @@ const isMilesNumberValid = !isNaN(MilesNumber) && MilesNumber >= 5;
 
 // * apparirà messaggio di errore
 if (!isMilesNumberValid) {
-  alert("Il valore inserito non è valido");
+  alert("Errore: Distanza non valida");
 }
 
 // * chiedere all'utente l'età del passeggero --> (età del passeggero)
@@ -69,7 +69,7 @@ const isUserAgerValid = !isNaN(UserAge) && UserAge >= 1 && UserAge < 120;
 
 // * apparirà messaggio di errore
 if (!isUserAgerValid) {
-  alert("Il valore inserito non è valido");
+  alert("Errore: Età non valida");
 }
 
 console.log("KM da percorrere:" + " " + MilesNumber);
@@ -97,7 +97,10 @@ if (isMilesNumberValid && isUserAgerValid) {
 
     // * apparirà messaggio con (prezzo km del biglietto scontato under18)
     outputMessage =
-      "Prezzo biglietto (sconto under18):" + " " + MinorTicketPrice + "€";
+      "Prezzo biglietto (sconto under18):" +
+      " " +
+      MinorTicketPrice.toFixed(2) +
+      "€";
   }
 
   // * SE (età del passeggero) è maggiore OR uguale di 65
@@ -111,13 +114,16 @@ if (isMilesNumberValid && isUserAgerValid) {
 
     // * apparirà messaggio con (prezzo km del biglietto scontato over65)
     outputMessage =
-      "Prezzo biglietto (sconto over65):" + " " + OverTicketPrice + "€";
+      "Prezzo biglietto (sconto over65):" +
+      " " +
+      OverTicketPrice.toFixed(2) +
+      "€";
   }
 
   // * ALTRIMENTI SE (età del passeggero) è un numero compreso fra 18 AND 64
   else if (UserAge >= 18 && UserAge <= 64)
     // * apparirà messaggio con (prezzo km del biglietto)
-    outputMessage = "Prezzo biglietto:" + " " + TicketPrice + "€";
+    outputMessage = "Prezzo biglietto:" + " " + TicketPrice.toFixed(2) + "€";
 }
 
 // ! OUTPUT
